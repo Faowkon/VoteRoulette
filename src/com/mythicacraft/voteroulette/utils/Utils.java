@@ -864,9 +864,10 @@ public class Utils {
 		return sb.toString();
 	}
 
+
 	public static int getPlayerOpenInvSlots(Player player) {
 		Inventory inv = player.getInventory();
-		ItemStack[] contents = inv.getContents();
+		ItemStack[] contents = inv.getStorageContents();
 		int count = 0;
 		for (ItemStack content : contents) {
 			if (content == null)
